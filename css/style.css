@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  animation: glow 1.5s infinite alternate;
+}
+
+.countdown {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.final-message {
+  font-size: 4rem;
+  font-family: "Pacifico", cursive;
+  display: none;
+  animation: fadeIn 2s forwards;
+  color: #ffcc00;
+  text-shadow: 0 0 20px #ff9900, 0 0 40px #ff6600;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
